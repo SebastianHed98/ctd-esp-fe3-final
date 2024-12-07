@@ -5,12 +5,10 @@ const Navbar = () => {
   const { state, toggleTheme } = useGlobalContext();
   return (
     <nav className={`navbar ${state.theme}`}>
-      {/* Logo en el lado izquierdo */}
       <div className="navbar-left">
         <img src="./DH.ico" alt="DH Logo" className="navbar-logo" />
       </div>
 
-      {/* Links de navegación */}
       <ul className="navbar-links">
         <li>
           <Link to="/">Home</Link>
@@ -23,7 +21,6 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Botón para cambiar de tema */}
       <div className="themeToggle">
         <button onClick={toggleTheme}>
           {state.theme === "light" ? "🌞 Modo Claro" : "🌜 Modo Oscuro"}
